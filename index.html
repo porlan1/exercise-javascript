@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Future Wonder Programming Exercise</title>
+  <!-- Custom -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+  <!-- Tests -->
+  <script src="https://code.jquery.com/qunit/qunit-2.0.1.js"></script>
+  <script src="js/tests/main-test.js"></script>
+
+  <!-- Bootstrap Assets -->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Star Wars Starship Viewer</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <p class="lead">
+      Objective: A user should be able to view a list of Stars Wars characters by film, with a named list of their starships using the <a href="https://swapi.co/">https://swapi.co/</a> API, jQuery 3, QUnit, and Bootstrap 3.
+    </p>
+
+    <ol>
+      <li>The dropdown below should contain a list of all seven Star Wars movies, listed by order of release</li>
+      <li>Selecting a movie should clear and populate the table below with a list of characters, and the names of their starships in the format below</li>
+      <li>Code should contain test coverage using <a href="https://qunitjs.com/">QUnit</a></li>
+      <li><strong>BONUS:</strong> Clicking the <a href="#"><span class="glyphicon glyphicon-remove"></span></a> icon next to a character's name should clear that character from being returned from future search results. This can reset when the page is reloaded. (i.e. there is no need to persist this preference to a data store)</li>
+    </ol>
+
+    <br>
+
+    <div class="dropdown">
+
+      <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Select Star Wars Film
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Populate me with film names!</a></li>
+        </ul>
+      </div>
+
+      <br>
+
+      <h3>Example Output:</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Starships</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Luke Skywalker <a href="#"><span class="glyphicon glyphicon-remove"></span></a></td>
+            <td>X-Wing, Imperial shuttle</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div><!-- /.container -->
+
+  </body>
+  </html>
