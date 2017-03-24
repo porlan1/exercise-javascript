@@ -3,20 +3,14 @@
 <head>
   <meta charset="utf-8">
   <title>Future Wonder Programming Exercise</title>
-  <!-- Custom -->
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js"></script>
-
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-
-  <!-- Tests -->
-  <script src="https://code.jquery.com/qunit/qunit-2.0.1.js"></script>
-  <script src="js/tests/main-test.js"></script>
 
   <!-- Bootstrap Assets -->
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!-- Custom -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -29,43 +23,44 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Star Wars Starship Viewer</a>
+        <a class="navbar-brand" href="index.html">Star Wars Starship Viewer</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
+          <li><a href="tests.html">Tests</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
   </nav>
 
   <div class="container">
-
-    <p class="lead">
-      Objective: A user should be able to view a list of Stars Wars characters by film, with a named list of their starships using the <a href="https://swapi.co/">https://swapi.co/</a> API, jQuery 3, QUnit, and Bootstrap 3.
-    </p>
-
-    <ol>
-      <li>The dropdown below should contain a list of all seven Star Wars movies, listed by order of release</li>
-      <li>Selecting a movie should clear and populate the table below with a list of characters, and the names of their starships in the format below</li>
-      <li>Code should contain test coverage using <a href="https://qunitjs.com/">QUnit</a></li>
-      <li><strong>BONUS:</strong> Clicking the <a href="#"><span class="glyphicon glyphicon-remove"></span></a> icon next to a character's name should clear that character from being returned from future search results. This can reset when the page is reloaded. (i.e. there is no need to persist this preference to a data store)</li>
-    </ol>
-
-    <br>
-
     <div class="dropdown">
 
-      <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Select Star Wars Film
+      <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Star Wars Films
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
-          <li><a href="#">Populate me with film names!</a></li>
         </ul>
       </div>
-
+      <h1 class = 'movieLabel'></h1>
+      <!--http://starwars.wikia.com/wiki/File:Jedi_Order.svg -->
+      <svg width="60" height="60" viewBox = '0 0 600 600' class = 'loadAnimation'>
+      <g>
+      <animateTransform attributeName="transform" attributeType="XML"
+        type="rotate" from="0 300 300" to="360 300 300"
+                          dur="1.0s"
+                          repeatCount="80"/>
+      <g transform="matrix(1.8288872,0,0,-1.8288872,-29.199695,629.1997)">
+        <g transform="scale(1,-1)">
+          <path d="M175.52734,-133.6582C172.71289,-137.76563 157.6958,-159.68359 157.6958,-159.68359C157.6958,-159.68359 169.14063,-128.20703 169.14063,-128.20703C169.14063,-128.20703 133.65918,-123.05469 133.65918,-123.05469C133.65918,-123.05469 169.14063,-117.9043 169.14063,-117.9043C169.14063,-117.9043 155.40576,-91.00586 155.40576,-91.00586C155.40576,-91.00586 172.5415,-109.02148 174.96289,-111.56641C173.96484,-72.5625 173.71924,-62.96289 173.71924,-62.96289C173.71924,-62.96289 86.15869,-103.59766 134.80371,-193.44922C134.80371,-193.44922 74.13965,-260.40918 129.08008,-301.61475C129.08008,-301.61475 35.22363,-244.95703 94.74219,-147.66602C94.74219,-147.66602 45.52539,-195.73779 71.27832,-244.38477C71.27832,-244.38477 26.63965,-181.43066 81.00781,-112.18164C81.00781,-112.18164 66.12793,-121.33984 52.96533,-156.25C52.96533,-156.25 62.56689,-52.32227 178.84082,-50.95898C178.84082,-50.94531 178.84082,-50.94531 178.84082,-50.94531C179.22852,-50.94531 179.61377,-50.94531 180,-50.94727C180.38477,-50.94531 180.77148,-50.94531 181.1582,-50.94531C181.1582,-50.94531 181.1582,-50.94531 181.1582,-50.95898C297.43164,-52.32227 307.0332,-156.25 307.0332,-156.25C293.87109,-121.33984 278.99219,-112.18164 278.99219,-112.18164C333.35938,-181.43066 288.7207,-244.38477 288.7207,-244.38477C314.47461,-195.73779 265.25586,-147.66602 265.25586,-147.66602C324.77539,-244.95703 230.91992,-301.61475 230.91992,-301.61475C285.85938,-260.40918 225.19531,-193.44922 225.19531,-193.44922C273.83984,-103.59766 186.2793,-62.96289 186.2793,-62.96289C186.2793,-62.96289 186.03516,-72.5625 185.03711,-111.56641C187.45898,-109.02148 204.59375,-91.00586 204.59375,-91.00586C204.59375,-91.00586 190.85938,-117.9043 190.85938,-117.9043C190.85938,-117.9043 226.33984,-123.05469 226.33984,-123.05469C226.33984,-123.05469 190.85938,-128.20703 190.85938,-128.20703C190.85938,-128.20703 202.30273,-159.68359 202.30273,-159.68359C202.30273,-159.68359 187.28711,-137.76563 184.47266,-133.6582C183.19727,-183.47852 180.03516,-307.09424 180.01953,-307.67773C180.01367,-309.04834 180.01367,-309.05615 180.01367,-309.05615C180.01367,-309.05615 180.01367,-309.05469 180,-308.48633C179.98486,-309.05469 179.98486,-309.05615 179.98486,-309.05615C179.98486,-309.05615 179.98486,-309.04834 179.979,-307.67773C179.95361,-306.70264 176.79932,-183.36523 175.52734,-133.6582C175.52734,-133.6582 175.52734,-133.6582 175.52734,-133.6582z" id="p1" style="fill:#800;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+          <path d="M180,-344C89.42529,-344 16,-270.57471 16,-180C16,-89.42578 89.42529,-16 180,-16C270.57422,-16 344,-89.42578 344,-180C344,-270.57471 270.57422,-344 180,-344C180,-344 180,-344 180,-344z" id="p2" style="fill:none;stroke:#800;stroke-width:0.05337262;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"/>
+          <path d="M180,-324.35156C259.7207,-324.35156 324.35156,-259.72168 324.35156,-180C324.35156,-100.2793 259.7207,-35.64844 180,-35.64844C100.27832,-35.64844 35.64844,-100.2793 35.64844,-180C35.64844,-259.72168 100.27832,-324.35156 180,-324.35156C180,-324.35156 180,-324.35156 180,-324.35156zM180,-344C89.42676,-344 16,-270.57324 16,-180C16,-89.42773 89.42676,-16 180,-16C270.57227,-16 344,-89.42773 344,-180C344,-270.57324 270.57227,-344 180,-344C180,-344 180,-344 180,-344z" id="p3" style="fill:#800;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+        </g>
+      </g>
+      </g>
+    </svg>
       <br>
 
-      <h3>Example Output:</h3>
+      <h3>Characters and Starships:</h3>
       <table class="table table-striped">
         <thead>
           <tr>
@@ -74,14 +69,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Luke Skywalker <a href="#"><span class="glyphicon glyphicon-remove"></span></a></td>
-            <td>X-Wing, Imperial shuttle</td>
-          </tr>
         </tbody>
       </table>
 
     </div><!-- /.container -->
 
   </body>
+  <script src="js/main.js"></script>
+  <script>
+    var sw = new StarWars();
+    sw.getMovieData();
+  </script>
   </html>
